@@ -1,19 +1,15 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
 
-
+# Downloading the data 
 data = pd.read_csv("C:/Users/KYershat/Desktop/projects/cause_of_deaths_around_the_world/cause_of_deaths.csv")
 
-# I want to get top 10 causes of death data for each year and each country(country should be avaible as a choice)
+# Renaming the column names to shorter versions of them
 data.rename(columns = {"Alzheimer's Disease and Other Dementias":"Alzheimer's/Dementia", "Parkinson's Disease":"Parkinson's", "Interpersonal Violence":"Violence", "Drug Use Disorders":"Drugs","Cardiovascular Diseases":"Cardiovascular" }, inplace = True)
-
 data.rename(columns = {"Alcohol Use Disorders":"Alcohol","Environmental Heat and Cold Exposure":"Environmental","Conflict and Terrorism":"Conflict","Chronic Kidney Disease":"Kidney Disease","Cirrhosis and Other Chronic Liver Diseases":"Liver diseases"}, inplace = True)
-
-
 data.rename(columns = {"Chronic Respiratory Diseases":"Respiratory","Fire, Heat, and Hot Substances":"Hot substances"}, inplace = True)
 
-
+# Calculating total count of deaths 
 data["Total"] = data.iloc[:,3:].sum(axis=1)
 
 ## Changing dataset so it only shows the percentage of total deaths in given year
@@ -43,7 +39,7 @@ start_year = 1979
 
 
 
-## labels are not shown when percenatage is lower than 6%, but reappear when it does. 
+## labels are not shown when percenatage is lower than 4%, but reappear when it does. 
 def my_autopct(pct):
     return ('%1.1f%%' % pct) if pct > 4 else ''
 
@@ -85,10 +81,6 @@ for i,row in data.loc[data["Country/Territory"] == country].iterrows():
     the_text_on_title = str(country) + " - " + str(start_year)
     ax1.clear()
     plt.text(-0.3, 1.05, the_text_on_title, ha='left', va='top', transform=ax1.transAxes)
-    
-    
-  
-
     ax1.pie(ten_main_causes, labels=causes_names, autopct=my_autopct, shadow=True, startangle=140,colors = colors, rotatelabels=True)
     start_year+=1
     plt.pause(0.8)
