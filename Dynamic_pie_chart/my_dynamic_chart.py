@@ -6,6 +6,12 @@ import numpy as np
 data = pd.read_csv("C:/Users/KYershat/Desktop/projects/cause_of_deaths_around_the_world/cause_of_deaths.csv")
 
 # I want to get top 10 causes of death data for each year and each country(country should be avaible as a choice)
+data.rename(columns = {"Alzheimer's Disease and Other Dementias":"Alzheimer's/Dementia", "Parkinson's Disease":"Parkinson's", "Interpersonal Violence":"Violence", "Drug Use Disorders":"Drugs","Cardiovascular Diseases":"Cardiovascular" }, inplace = True)
+
+data.rename(columns = {"Alcohol Use Disorders":"Alcohol","Environmental Heat and Cold Exposure":"Environmental","Conflict and Terrorism":"Conflict","Chronic Kidney Disease":"Kidney Disease","Cirrhosis and Other Chronic Liver Diseases":"Liver diseases"}, inplace = True)
+
+
+data.rename(columns = {"Chronic Respiratory Diseases":"Respiratory","Fire, Heat, and Hot Substances":"Hot substances"}, inplace = True)
 
 
 data["Total"] = data.iloc[:,3:].sum(axis=1)
@@ -37,9 +43,9 @@ start_year = 1979
 
 
 
-## labels are not shown when percenatage is lower than 5%, but reappear when it does. 
+## labels are not shown when percenatage is lower than 6%, but reappear when it does. 
 def my_autopct(pct):
-    return ('%1.1f%%' % pct) if pct > 5 else ''
+    return ('%1.1f%%' % pct) if pct > 4 else ''
 
 
 ## Loop through each year from 1979 to 2009
@@ -74,15 +80,18 @@ for i,row in data.loc[data["Country/Territory"] == country].iterrows():
     causes_names.append("Other")
  
 
-    explode = (0.1, 0.11, 0.12, 0.13, 0.14, 0.15, 0.2,0.3,0.3,0.2,0.2)
+    explode = (0.1, 0.11, 0.12, 0.13, 0.14, 0.15, 0.2,0.3,0.3,0.31,0.32)
     colors= ['orange', 'blue', 'green', 'yellow', 'brown','pink','#ff9999','#66b3ff','#99ff99','#ffcc99','#721779']
     the_text_on_title = str(country) + " - " + str(start_year)
     ax1.clear()
-    ax1.title.set_text(the_text_on_title)
+    plt.text(-0.3, 1.05, the_text_on_title, ha='left', va='top', transform=ax1.transAxes)
+    
+    
+  
 
-    ax1.pie(ten_main_causes, labels=causes_names, autopct=my_autopct, shadow=True, startangle=140,colors = colors)
+    ax1.pie(ten_main_causes, labels=causes_names, autopct=my_autopct, shadow=True, startangle=140,colors = colors, rotatelabels=True)
     start_year+=1
-    plt.pause(0.5)
+    plt.pause(0.8)
     percentage_of_cause.clear()
     ten_main_causes.clear()
     location_of_causes.clear()
@@ -92,52 +101,3 @@ plt.draw()
 
 
 
-
-# countries = ['Afghanistan', 'Albania', 'Algeria', 'American Samoa', 'Andorra', 
-#        'Angola', 'Antigua and Barbuda', 'Argentina', 'Armenia',
-#        'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bahrain',        
-#        'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 
-#        'Bermuda', 'Bhutan', 'Bolivia', 'Bosnia and Herzegovina',
-#        'Botswana', 'Brazil', 'Brunei', 'Bulgaria', 'Burkina Faso',        
-#        'Burundi', 'Cambodia', 'Cameroon', 'Canada', 'Cape Verde',
-#        'Central African Republic', 'Chad', 'Chile', 'China', 'Colombia',  
-#        'Comoros', 'Congo', 'Cook Islands', 'Costa Rica', "Cote d'Ivoire", 
-#        'Croatia', 'Cuba', 'Cyprus', 'Czechia',
-#        'Democratic Republic of Congo', 'Denmark', 'Djibouti', 'Dominica', 
-#        'Dominican Republic', 'Ecuador', 'Egypt', 'El Salvador',
-#        'Equatorial Guinea', 'Eritrea', 'Estonia', 'Eswatini', 'Ethiopia', 
-#        'Fiji', 'Finland', 'France', 'Gabon', 'Gambia', 'Georgia',
-#        'Germany', 'Ghana', 'Greece', 'Greenland', 'Grenada', 'Guam',      
-#        'Guatemala', 'Guinea', 'Guinea-Bissau', 'Guyana', 'Haiti',
-#        'Honduras', 'Hungary', 'Iceland', 'India', 'Indonesia', 'Iran',    
-#        'Iraq', 'Ireland', 'Israel', 'Italy', 'Jamaica', 'Japan', 'Jordan',
-#        'Kazakhstan', 'Kenya', 'Kiribati', 'Kuwait', 'Kyrgyzstan', 'Laos',     
-#        'Latvia', 'Lebanon', 'Lesotho', 'Liberia', 'Libya', 'Lithuania',       
-#        'Luxembourg', 'Madagascar', 'Malawi', 'Malaysia', 'Maldives',
-#        'Mali', 'Malta', 'Marshall Islands', 'Mauritania', 'Mauritius',        
-#        'Mexico', 'Micronesia', 'Moldova', 'Monaco', 'Mongolia',
-#        'Montenegro', 'Morocco', 'Mozambique', 'Myanmar', 'Namibia',
-#        'Nauru', 'Nepal', 'Netherlands', 'New Zealand', 'Nicaragua',
-#        'Niger', 'Nigeria', 'Niue', 'North Korea', 'North Macedonia',
-#        'Northern Mariana Islands', 'Norway', 'Oman', 'Pakistan', 'Palau',     
-#        'Palestine', 'Panama', 'Papua New Guinea', 'Paraguay', 'Peru',
-#        'Philippines', 'Poland', 'Portugal', 'Puerto Rico', 'Qatar',
-#        'Romania', 'Russia', 'Rwanda', 'Saint Kitts and Nevis',
-#        'Saint Lucia', 'Saint Vincent and the Grenadines', 'Samoa',
-#        'San Marino', 'Sao Tome and Principe', 'Saudi Arabia', 'Senegal',      
-#        'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore', 'Slovakia',       
-#        'Slovenia', 'Solomon Islands', 'Somalia', 'South Africa',
-#        'South Korea', 'South Sudan', 'Spain', 'Sri Lanka', 'Sudan',
-#        'Suriname', 'Sweden', 'Switzerland', 'Syria', 'Taiwan',
-#        'Tajikistan', 'Tanzania', 'Thailand', 'Timor', 'Togo', 'Tokelau',      
-#        'Tonga', 'Trinidad and Tobago', 'Tunisia', 'Turkey',
-#        'Turkmenistan', 'Tuvalu', 'Uganda', 'Ukraine',
-#        'United Arab Emirates', 'United Kingdom', 'United States',
-#        'United States Virgin Islands', 'Uruguay', 'Uzbekistan', 'Vanuatu',    
-#        'Venezuela', 'Vietnam', 'Yemen', 'Zambia', 'Zimbabwe']
-
-
-
-
-
-   
