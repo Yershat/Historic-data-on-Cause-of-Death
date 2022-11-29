@@ -4,6 +4,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
+import time
+
 # Downloading the data 
 data = pd.read_csv("C:/Users/KYershat/Desktop/projects/cause_of_deaths_around_the_world/cause_of_deaths.csv")
 
@@ -18,7 +20,7 @@ data["Total"] = data.iloc[:,3:].sum(axis=1)
 ## Changing dataset so it only shows the percentage of total deaths in given year
 for col in data.columns[3:-1]:
     data[col] /= data["Total"]
-    data[col] = round(data[col],6)
+    data[col] = round(data[col],8)
 
 labels = []
 for i in data:
@@ -30,8 +32,6 @@ causes = labels[3:-1]
 
 country =  "Zimbabwe"
 
-
-fig, ax = plt.subplots()
 
 
 ## Getting the data ready
@@ -66,25 +66,26 @@ for i,row in data.loc[data["Country/Territory"] == country].iterrows():
     causes_names= []
     for i in location_of_causes:
         causes_names.append(causes[i])
+
+    
     
     causes_names.append("Other")
 
-    y_pos = np.arange(len(causes_names))
     colors= ['orange', 'blue', 'green', 'yellow', 'brown','pink','#ff9999','#66b3ff','#99ff99','#ffcc99','#721779']
 
+    
 
-    # ax.barh(causes_names, ten_main_causes_converted, align='center' )
 
-    # ax.set_yticks(y_pos)
-    # ax.invert_yaxis()  # labels read top-to-bottom
-    # ax.set_xlabel('Count')
-    # ax.set_title('Count of death by cause')
-
-    plt.pause(0.8)
+    plt.bar(causes_names,ten_main_causes_converted,color = ['orange', 'blue', 'green', 'yellow', 'brown','pink','#ff9999','#66b3ff','#99ff99','#ffcc99','#721779'])
+    plt.xticks(rotation=70)
+    plt.pause(1)
+    ten_main_causes.clear()
     percentage_of_cause.clear()
     ten_main_causes_converted.clear()
     location_of_causes.clear()
     causes_names.clear()
+    plt.clf()
+    
 
 
 plt.show()
