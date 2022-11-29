@@ -26,7 +26,8 @@ for i in data:
 causes = labels[3:-1]
 
 # Country can be chosen by user 
-country = "Zimbabwe"
+country = "Kazakhstan"
+
 
 
 
@@ -90,6 +91,8 @@ for i,row in data.loc[data["Country/Territory"] == country].iterrows():
     causes_names.clear()
 
 plt.draw()
+
+
 
 
 
