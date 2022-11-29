@@ -32,6 +32,7 @@ causes = labels[3:-1]
 
 country =  "Zimbabwe"
 
+start_year = 1979
 
 
 ## Getting the data ready
@@ -73,10 +74,10 @@ for i,row in data.loc[data["Country/Territory"] == country].iterrows():
 
     colors= ['orange', 'blue', 'green', 'yellow', 'brown','pink','#ff9999','#66b3ff','#99ff99','#ffcc99','#721779']
 
-    
-
-
     plt.bar(causes_names,ten_main_causes_converted,color = ['orange', 'blue', 'green', 'yellow', 'brown','pink','#ff9999','#66b3ff','#99ff99','#ffcc99','#721779'])
+    the_text_on_title = str(country) + " - " + str(start_year)
+    plt.title(the_text_on_title)
+    start_year+=1
     plt.xticks(rotation=70)
     plt.pause(1)
     ten_main_causes.clear()
