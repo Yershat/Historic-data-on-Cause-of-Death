@@ -8,7 +8,14 @@ Below the gif you can see the list of countries for which data is available
 ![](https://github.com/Yershat/gifs/blob/master/dynamic_pie_chart_Kazakhstan.gif)
 
 
-**Rwanda**. Regular speed:
+**China**. Regular speed:
+![](https://github.com/Yershat/gifs/blob/master/dynamic_pie_chart_China.gif)
+
+**Germany**. Regular speed:
+![](https://github.com/Yershat/gifs/blob/master/dynamic_pie_chart_Germany.gif)
+
+**United States** Regular speed:
+![](https://github.com/Yershat/gifs/blob/master/dynamic_pie_chart_United_States.gif)
 
 
 
