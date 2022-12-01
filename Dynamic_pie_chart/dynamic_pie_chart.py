@@ -26,7 +26,7 @@ for i in data:
 causes = labels[3:-1]
 
 # Country can be chosen by user 
-country = "Kazakhstan"
+country = "India"
 
 
 
@@ -84,7 +84,7 @@ for i,row in data.loc[data["Country/Territory"] == country].iterrows():
     plt.text(-0.3, 1.05, the_text_on_title, ha='left', va='top', transform=ax1.transAxes)
     ax1.pie(ten_main_causes, labels=causes_names, autopct=my_autopct, shadow=True, startangle=140,colors = colors, rotatelabels=True)
     start_year+=1
-    plt.pause(0.8)
+    plt.pause(1)
     percentage_of_cause.clear()
     ten_main_causes.clear()
     location_of_causes.clear()
