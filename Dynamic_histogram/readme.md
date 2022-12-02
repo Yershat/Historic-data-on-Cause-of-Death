@@ -5,7 +5,7 @@ The percentage is calculated with the function: Death from particular cause divi
 The histograms are made dynamic so the trends can be seen in year by year order. <br /></p>
 
 <p>Installations</p>
-<p style= "background-color":"black">
+<p style = "background":"black">
   import pandas as pd<br />
 import matplotlib.pyplot as plt<br />
 </p>
