@@ -26,7 +26,7 @@ for i in data:
 causes = labels[3:-1]
 
 # Country can be chosen by user 
-country = "India"
+country = "Russia"
 
 
 
