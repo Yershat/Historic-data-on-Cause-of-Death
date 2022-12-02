@@ -4,11 +4,7 @@
 The percentage is calculated with the function: Death from particular cause divided by total count of deaths in the country.<br />
 The histograms are made dynamic so the trends can be seen in year by year order. <br /></p>
 
-<p>Installations</p>
-<p style = "background":"black">
-  import pandas as pd<br />
-import matplotlib.pyplot as plt<br />
-</p>
+
 
 ![](https://github.com/Yershat/gifs/blob/master/Alzheimer.gif)
 
