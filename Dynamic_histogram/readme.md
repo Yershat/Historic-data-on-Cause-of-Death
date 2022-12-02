@@ -6,6 +6,9 @@ The histograms are made dynamic so the trends can be seen in year by year order.
 
 <p>Installations</p>
 <p style= "background-color":"black">
+  import pandas as pd<br />
+import matplotlib.pyplot as plt<br />
+</p>
 
 ![](https://github.com/Yershat/gifs/blob/master/Alzheimer.gif)
 
