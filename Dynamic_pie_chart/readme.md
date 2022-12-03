@@ -1,3 +1,5 @@
+<h1 align="center">Country specific analysis</h1>
+
 Pie chart shows top 10 causes of deaths given a country.<br />
 
 The country name can be manipulated. File contains data on more 200 countries.<br />
