@@ -4,4 +4,4 @@ Dataset contains data on number of deaths that happened because of diseases for 
 The link to dataset: https://www.kaggle.com/datasets/iamsouravbanerjee/cause-of-deaths-around-the-world.<br />
 
 ###### Installations
-<p> something</p>
+```acwdafe ```
