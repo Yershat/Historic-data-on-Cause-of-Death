@@ -36,5 +36,24 @@ The histograms are made dynamic so the trends can be seen in year by year order.
 ![](https://github.com/Yershat/gifs/blob/master/nutrition.gif)
 
 
+**Drowning**<br />
+![](https://github.com/Yershat/gifs/blob/master/drowning.gif)
+
+**Tuberculosis**<br />
+![](https://github.com/Yershat/gifs/blob/master/Tuberculosis.gif)
+
+**Self-harm or suicide**<br />
+![](https://github.com/Yershat/gifs/blob/master/Self-harm.gif)
+
+**Road Injuries**<br />
+![](https://github.com/Yershat/gifs/blob/master/Road-Injuries.gif)
+
+**Protein-Energy-Malnutrition**<br />
+![](https://github.com/Yershat/gifs/blob/master/Protein-Energy-Malnutrition_.gif)
+
+**Poisoning**<br />
+![](https://github.com/Yershat/gifs/blob/master/Poisonings.gif)
+
+
 
 
