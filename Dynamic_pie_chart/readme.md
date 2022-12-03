@@ -1,8 +1,8 @@
-Pie chart shows top 10 causes of deaths given a country.
+Pie chart shows top 10 causes of deaths given a country.<br />
 
-The country name can be manipulated. File contains data on more 200 countries.
+The country name can be manipulated. File contains data on more 200 countries.<br />
 
-Below the gifы you can see the list of countries for which data is available. Similar charts will be generated if country name is changed in the script.
+Below the gifs you can see the list of countries for which data is available. Similar charts will be generated if country name is changed in the script.<br />
 
 **Kazakhstan**. Speed x2
 ![](https://github.com/Yershat/gifs/blob/master/pie%20chart/dynamic_pie_chart_Kazakhstan.gif)
