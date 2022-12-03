@@ -5,7 +5,7 @@ The link to dataset: https://www.kaggle.com/datasets/iamsouravbanerjee/cause-of-
 
 ###### Installations
 <p>Only two simple packages have been used for the project </p>
-``` 
+``` python
 import pandas as pd 
 import matplotlib.pyplot as plt
 ```
