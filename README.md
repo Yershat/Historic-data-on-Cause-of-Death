@@ -10,7 +10,7 @@ The link to dataset: https://www.kaggle.com/datasets/iamsouravbanerjee/cause-of-
 `import matplotlib.pyplot as plt`<br />
 
 
-<p>If you want to get graph for different country in [Country specific analysis](https://github.com/Yershat/Historic-data-on-Cause-of-Death/tree/master/Dynamic_pie_chart/) , the variable on line 29 in the script could be changed to any of the countries that is listed on Github readme of the specific project</p> <br />
+ - If you want to get graph for different country in [Country specific analysis](https://github.com/Yershat/Historic-data-on-Cause-of-Death/tree/master/Dynamic_pie_chart) , the variable on line 29 in the script could be changed to any of the countries that is listed on Github readme of the specific project <br />
 
 
 
