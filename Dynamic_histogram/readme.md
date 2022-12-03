@@ -5,8 +5,36 @@ The percentage is calculated with the function: Death from particular cause divi
 The histograms are made dynamic so the trends can be seen in year by year order. <br /></p>
 
 
-
+**Alzheimer or Dementia**<br />
 ![](https://github.com/Yershat/gifs/blob/master/Alzheimer.gif)
 
+**Acute-Hepatitis**<br />
 ![](https://github.com/Yershat/gifs/blob/master/Acute-Hepatitis.gif)
+
+**Diarrheal-Diseases**<br />
+![](https://github.com/Yershat/gifs/blob/master/Diarrheal-Diseases.gif)
+
+**Exposure-to-Forces-of-Nature**<br />
+![](https://github.com/Yershat/gifs/blob/master/Exposure-to-Forces-of-Nature.gif)
+
+**HIV/AIDS**<br />
+![](https://github.com/Yershat/gifs/blob/master/HIVAIDS.gif)
+
+**Lower-Respiratory-Infections**<br />
+![](https://github.com/Yershat/gifs/blob/master/Lower-Respiratory-Infections.gif)
+
+**Maternal-Disorders**<br />
+![](https://github.com/Yershat/gifs/blob/master/Maternal-Disorders.gif)
+
+**Neonatal-Disorders**<br />
+![](https://github.com/Yershat/gifs/blob/master/Neonatal-Disorders.gif)
+
+**Neoplasms or Cancer**<br />
+![](https://github.com/Yershat/gifs/blob/master/Neoplasms.gif)
+
+**Nutrition-related deaths**<br />
+![](https://github.com/Yershat/gifs/blob/master/nutrition.gif)
+
+
+
 
