@@ -8,3 +8,5 @@ The histograms are made dynamic so the trends can be seen in year by year order.
 
 ![](https://github.com/Yershat/gifs/blob/master/Alzheimer.gif)
 
+![](https://github.com/Yershat/gifs/blob/master/Acute-Hepatitis.gif)
+
